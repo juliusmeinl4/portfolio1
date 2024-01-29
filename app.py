@@ -547,19 +547,16 @@ def create_yearly_sales_charts(yearly_sales_data):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    
     today = datetime.now().date()
-    start_of_week = today - timedelta(days=today.weekday())  
-    end_of_week = start_of_week + timedelta(days=6)
-
-    default_start_date = start_of_week.strftime('%Y-%m-%d')
-    default_end_date = end_of_week.strftime('%Y-%m-%d')
+    # Set default start date to 6 days before today
+    default_start_date = (today - timedelta(days=6)).strftime('%Y-%m-%d')
+    default_end_date = today.strftime('%Y-%m-%d')
 
     start_date = request.args.get('start_date', default_start_date)
     end_date = request.args.get('end_date', default_end_date)
     selected_brand = request.args.get('brand', 'all').lower()
 
-    
+    # Treat empty brand string as 'all'
     if not selected_brand:
         selected_brand = 'all'
 
