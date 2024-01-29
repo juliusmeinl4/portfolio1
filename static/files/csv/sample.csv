@@ -1,0 +1,4 @@
+platform,desc,tags,scheduled_time,article_url,article_title,featured_image_url
+Twitter,This is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for TwitterThis is a sample post for Twitter,#example,2023-11-20T15:00:00,http://example.com/article1,Sample Article 1,http://example.com/image1.jpg
+Facebook,This is a sample post for Facebook,#social,2023-11-21T16:00:00,http://example.com/article2,Sample Article 2,http://example.com/image2.jpg
+LinkedIn,This is a sample post for LinkedIn,#professional,2023-11-22T17:00:00,http://example.com/article3,Sample Article 3,http://example.com/image3.jpg

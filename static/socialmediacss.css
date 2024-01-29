@@ -1,0 +1,1291 @@
+:root {
+    --primary-color: #007bff; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary gray */
+    --accent-color: #28a745; /* Bootstrap success green */
+    --light-background: #fff; /* Light gray background */
+    --dark-background: #343a40; /* Darker gray for text and headings */
+    --text-color: #212529; /* Bootstrap dark text color */
+    --link-color: #007bff; /* Bootstrap link color */
+    --link-hover-color: #0056b3; /* Darker blue for link hover state */
+}
+
+/* Reset some default table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+}
+
+table th {
+    background-color: var(--light-background);
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+/* Style table rows */
+table td {
+    padding: 10px;
+/*    border: 1px solid #dfdfdf;*/
+}
+
+/* Style alternate rows */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Style links in the first column */
+table td.title a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Style the "Generate Content" button */
+table .generate-content-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+table .generate-content-btn:hover {
+    background-color: var(--link-hover-color);
+}
+
+/* Style the image in the second column */
+table td img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Style the "Edit" span in the third column */
+table .edit-icon {
+    color: #777;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--light-background);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--light-background);
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+a, button, .btn-primary {
+    color: var(--light-background);
+}
+
+a:hover, button:hover, .btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+input[type="text"], textarea, select, .flatpickr {
+    background-color: var(--light-background);
+    border: 1px solid #cbd2d9;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.fc-toolbar-title {
+    color: var(--dark-background);
+}
+
+/* Additional UI Enhancements */
+
+/* Buttons and Links */
+button, .btn-primary {
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+.body-wrapper {
+    padding: 30px;
+    margin: auto; /* Centers the div */
+    padding: 20px; /* Padding around the content */
+    background: #f9fafb; /* Background color for the boxed look */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+button:hover {
+    background-color: #2980b9;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Article Card Styles */
+.article-card {
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+}
+
+.article-card-content {
+    padding: 20px;
+}
+
+/* Tables Container and Scrollable Table Styles */
+.tables-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    position: relative;
+    background: #f9fafb;
+}
+
+.scrollable-table {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 600px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    scrollbar-width: thick;
+    scrollbar-color: #3498db #ecf0f1;
+}
+
+.scrollable-table::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+.scrollable-table::-webkit-scrollbar-track,
+.scrollable-table::-webkit-scrollbar-track:hover {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 10px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+}
+
+/* Button Styling */
+button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .tables-container {
+        flex-direction: column;
+    }
+    .scrollable-table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Additional Style for Editable Content */
+td[contenteditable='true'] {
+    background-color: #f9f9f9;
+    border: 1px dashed #ccc;
+    cursor: text;
+}
+
+td[contenteditable='true']:hover::after {
+    content: 'Click to edit';
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    font-size: 12px;
+    color: #666;
+    background: #fff;
+    padding: 2px 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+td[contenteditable='true']:hover {
+    background-color: #e8f0fe;
+}
+
+/* Table Footer Styles */
+.table-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background: #f9f9f9;
+    bottom: 0;
+    border: 1px solid #ddd;
+}
+
+.table-footer button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.table-footer button:hover {
+    background-color: #2980b9;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: var(--dark-background);
+    float: right;
+    opacity: 0.7;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* Additional Styles */
+#results {
+    height: 501px;
+}
+
+
+button, .btn {
+    background-color: var(--primary-color)!important;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Sidebar Menu Styles */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    max-width: 12%;
+}
+
+.sidebar ul.nav {
+    padding-left: 0;
+}
+
+.sidebar .nav-link {
+    color: #333;
+}
+
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .col-lg-10 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    main.col-lg-10 {
+        max-width: 88%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-11 {
+        flex: 0 0 91.666667%;
+        max-width: 91.666667%;
+    }
+}
+
+main.col-md-11 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Sticky Header Table Styles */
+.sticky-header-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sticky-header-table table th {
+    background-color: var(--light-background);
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+.sticky-header-table table td {
+    padding: 10px;
+    padding-left: 20px;
+/*    border: 1px solid #e0e0e0;*/
+}
+
+.sticky-header-table table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.modal-backdrop {
+    z-index: 1040;
+}
+
+.modal {
+    z-index: 1050;
+}
+
+/* Calendar Styles */
+#calendar {
+    height: 650px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.fc-event-logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fc-event-logo:hover::after {
+    content: attr(title);
+    position: absolute;
+    white-space: nowrap;
+    padding: 2px 8px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.fc-toolbar.fc-header-toolbar {
+    padding: 10px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.fc-toolbar-title {
+    color: #333;
+    font-size: 1.75rem;
+}
+
+.fc-event {
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.fc-event:hover {
+    transform: scale(1.03);
+}
+
+.fc-button-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.fc-button-primary:not(:disabled):not(.fc-button-active):hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.fc .fc-day-today {
+    background: #eaf6ff;
+}
+
+@media screen and (max-width: 768px) {
+    #calendar {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+.fc-event-main {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fc-event-main img {
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.fc-event-main .fc-event-title-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+/* Bulk CSV Upload Styles */
+#bulkCsvUpload {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.drag-area {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drag-area.highlight {
+    border-color: blue;
+}
+
+.file-name {
+    margin-top: 10px;
+    color: #555;
+}
+
+
+#editContentModal .modal-content {
+    background-color: #f8f9fa; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+#editContentModal .modal-header {
+    background-color: #007bff; /* Blue header */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border-top-left-radius: 8px; /* Rounded top-left corner */
+    border-top-right-radius: 8px; /* Rounded top-right corner */
+}
+
+#editContentModal .modal-title {
+    font-weight: bold;
+}
+
+#editContentModal .modal-body {
+    padding: 20px;
+}
+
+#editContentModal .btn-primary {
+    background-color: #007bff; /* Blue button */
+    border-color: #007bff; /* Blue border */
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#editContentModal .modal-dialog {
+    animation: slideDown 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    #editContentModal .modal-dialog {
+        width: 90%;
+        margin: 10px;
+    }
+}
+
+@media (min-width: 769px) {
+    #editContentModal .modal-dialog {
+        width: 50%;
+    }
+}
+
+.spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Light semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Adjust z-index as needed */
+}
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    float: left;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 { background-color: #007bff; animation-delay: 0.2s; } /* Blue */
+.sk-cube-grid .sk-cube2 { background-color: red; animation-delay: 0.3s; } /* Gray */
+.sk-cube-grid .sk-cube3 { background-color: #28a745; animation-delay: 0.4s; } /* Green */
+.sk-cube-grid .sk-cube4 { background-color: #007bff; animation-delay: 0.1s; } /* Blue */
+.sk-cube-grid .sk-cube5 { background-color: red; animation-delay: 0.2s; } /* Gray */
+.sk-cube-grid .sk-cube6 { background-color: #28a745; animation-delay: 0.3s; } /* Green */
+.sk-cube-grid .sk-cube7 { background-color: #007bff; animation-delay: 0s; }   /* Blue */
+.sk-cube-grid .sk-cube8 { background-color: red; animation-delay: 0.1s; } /* Gray */
+.sk-cube-grid .sk-cube9 { background-color: #28a745; animation-delay: 0.2s; } /* Green */
+
+@keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+        transform: scale3D(1, 1, 1);
+    } 35% {
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+.edit-content-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-content-form .form-control {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.edit-content-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.modal-lg {
+    max-width: 80%; /* Adjust the max-width as per your preference */
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    border-radius: .3rem;
+    outline: 0;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    position: relative;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding: 0px;
+}
+
+
+
+
+/* Style for each platform item */
+.platform-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 3px; /* Reduced padding around each item */
+}
+
+/* Style for the platform logos */
+.platform-item img {
+    width: 30px; /* Smaller logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 3px; /* Reduced space between logo and text */
+}
+
+/* Style for the platform names */
+.platform-item span {
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Prevent text from overflowing */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: nowrap; /* Keep text in a single line */
+    max-width: 100%; /* Limit width to parent container */
+    font-size: 0.7em; /* Smaller font size */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 600px) {
+    .platforms-grid {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); /* Even smaller columns on smaller screens */
+    }
+    .platform-item img {
+        width: 25px; /* Even smaller logos on smaller screens */
+    }
+    .platform-item span {
+        font-size: 0.6em; /* Even smaller text on smaller screens */
+    }
+}
+
+
+    /* Style for the search input */
+    .form-control {
+        border: 2px solid #007bff; /* Add a blue border */
+/*        border-radius: 20px; /* Rounded corners */*/
+        padding: 10px 20px; /* Add some padding */
+        font-size: 16px; /* Increase font size */
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    }
+
+    /* Style for the search input placeholder text */
+    .form-control::placeholder {
+        color: #007bff; /* Change placeholder text color to blue */
+    }
+
+    /* Style for the search input on focus */
+    .form-control:focus {
+        outline: none; /* Remove the default focus outline */
+        border-color: #0056b3; /* Darker blue border on focus */
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3); /* Stronger focus shadow */
+    }
+
+
+ 
+    /* Style for the search input field */
+    .form-control {
+        margin-bottom: 15px; /* Add space below the search input */
+    }
+
+.platforms-grid {
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Arrange items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Grid layout for the platforms */
+
+.btn-link {
+    text-decoration: none;
+}
+
+
+main {
+    background: #f9fafb;
+}
+
+
+/* Add shadow to tables */
+table {
+/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    border-collapse: collapse; /* Optional: Remove border spacing */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 18px;
+    }
+    /* Other mobile-specific styles */
+}
+
+
+.scrollable-table {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Adjust this value as needed to fit your layout */
+}
+
+.table-container {
+    flex: 1;
+    overflow: auto;
+    position: relative;
+}
+
+#generated-content-table {
+    width: 100%;
+}
+
+
+
+
+.table-footer {
+    background-color: white;
+    padding: 10px;
+    text-align: right;
+    border-top: 1px solid #ccc;
+}
+
+/* CSS to shorten and add ellipsis to table cell content */
+
+
+#generated-content-table td {
+    max-width: 150px; /* Adjust the max width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* CSS for the custom table header */
+.custom-header {
+    background-color: #f2f4f8; /* Add background color */
+    padding: 10px; /* Add padding for better spacing */
+    border-radius: 8px; /* Add rounded corners */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for long titles */
+    max-width: 200px; /* Adjust max-width as needed */
+}
+
+.header-content {
+    display: flex; /* Use flexbox to align content horizontally */
+    align-items: center; /* Center content vertically within the header */
+}
+
+.header-content p {
+    margin: 0; /* Remove default margin for the paragraph */
+    flex-grow: 1; /* Allow the title to grow and occupy available space */
+}
+
+.header-buttons button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin between buttons */
+}
+
+.header-buttons button:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+
+/*/* Add this CSS to style the table to fit inside the container */
+.table-fit {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Add this CSS to style the table columns with equal widths */
+.table-fit table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Add this CSS to your existing styles */
+#generated-content-table {
+    width: 100%;
+    table-layout: auto;
+}
+
+#generated-content-table tbody tr:nth-child(odd) {
+    background-color: #f0f0f0; /* Grey background for odd rows */
+}
+
+#generated-content-table tbody tr:nth-child(even) {
+    background-color: #ffffff; /* White background for even rows */
+}
+
+#generated-content-table td {
+    padding: 10px;
+    border: none; /* Remove borders from cells */
+}
+
+#generated-content-table th {
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+    border: none; /* Remove borders from header cells */
+}
+
+        header {
+            background-color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        .menu {
+            margin-right: 10px;
+        }
+.logout {
+    float: right;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.bg-light {
+    background-color: #fff!important;
+}
+
+.col-md-7 {
+    padding-right: 20px;
+}
+
+.table-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 1.2em; /* Adjust size as needed */
+    color: black;
+}
+
+.form-group.header-search {
+    margin-bottom: 0; /* Remove extra margin */
+}
+
+/* Style the search input */
+#article-search {
+    width: auto; /* Adjust based on your layout */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    margin: 0px;
+}
+
+/* Additional styles for the table header */
+th {
+    background-color: #3498db; /* or any color of your choice */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.container-fluid {
+    background-color: #f9fafb;
+}
+
+.pagination-container {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* Ensure it's at the bottom of the scrollable-table */
+}
+
+.pagination {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the pagination items */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.pagination .page-item {
+    margin-right: 5px; /* Add some space between pagination items */
+}
+
+.pagination .page-link {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Optional: for rounded corners */
+}
+
+.pagination .page-link:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+    border-color: #ddd;
+}
+.header-search .form-group {
+    text-align: center;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.header-search button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 8px 16px; /* Padding around the text */
+/*    margin: 5px; /* Space between buttons */*/
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.header-search button:hover {
+    background-color: #0056b3; /* Darker shade for hover state */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .header-search .form-group {
+        text-align: left; /* or 'right' depending on your design */
+    }
+}
+
+
+#placeholder-row td {
+    text-align: center;
+    color: #888; /* Placeholder text color */
+    padding: 20px; /* Placeholder padding */
+}
+.table-container {
+/*    display: flex;*/
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 300px; /* Adjust the height as needed */
+    text-align: center;
+    position: relative;
+}
+
+#placeholder {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+}
+
+/* Common properties for all cards */
+.card-common {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --blue: #324cdd;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #ec0c38;
+    --orange: #fd7e14;
+    --yellow: #fa3a0e;
+    --green: #2dce89;
+    --teal: #00A9A2;
+    --cyan: #11cdef;
+    --white: #fff;
+    --gray: #f7fafc;
+    --gray-dark: #333333;
+    --primary: #7571f9;
+    --secondary: #9097c4;
+    --success: #6fd96f;
+    --info: #4d7cff;
+    --warning: #f29d56;
+    --danger: #ff5e5e;
+    --light: #f8f9fa;
+    --dark: #333333;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    outline: none;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    color: #fff !important;
+    margin-bottom: 30px;
+    border: 0px;
+    border-radius: 0.625rem;
+    box-shadow: 6px 11px 41px -28px #a99de7;
+}
+
+/* Unique background images for each card */
+#successCard {
+    background-image: linear-gradient(230deg, #759bff, #843cf6);
+}
+
+.connected-platforms-card {
+    background-image: linear-gradient(230deg, #fc5286, #fbaaa2);
+}
+
+.new-card-1 {
+    background-image: linear-gradient(230deg, #ffc480, #ff763b);
+}
+
+.new-card-2 {
+    background-image: linear-gradient(230deg, #0e4cfd, #6a8eff);
+}
+
+.card-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+/* Separator line */
+.separator {
+    border: 1px solid #e0e0e0;
+    margin: 1rem 0;
+}
+
+.modal-dialog-scrollable {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.modal-content {
+    padding: 20px;
+    text-align: center; /* Center align the content */
+}
+
+.schedule-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.date-time-picker-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-content: center; /* Center the grid */
+}
+
+.date-picker-section, .time-picker-section {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.calendar-container, .time-picker-container {
+    margin-top: 10px;
+}
+
+.modal-footer {
+    padding: 15px;
+    display: flex;
+    justify-content: center; /* Center the footer buttons */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .modal-dialog-scrollable {
+        margin: 15px;
+    }
+
+    .date-time-picker-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.date-time-picker-container .flatpickr-calendar {
+    margin: auto; /* Center the calendar/time picker */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for aesthetics */
+}
+
+/* Specific styling for the inline calendar (date picker) */
+.date-time-picker-container .flatpickr-calendar.inline {
+    display: inline-block; /* Ensures inline display for centering */
+}
+
+/* Specific styling for the inline time picker */
+.date-time-picker-container .flatpickr-calendar.hasTime.noCalendar.inline {
+    display: inline-block; /* Ensures inline display for centering */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .date-time-picker-container .flatpickr-calendar.inline,
+    .date-time-picker-container .flatpickr-calendar.hasTime.noCalendar.inline {
+        width: 100%; /* Full width on smaller screens for better visibility */
+    }
+}
+.event-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.event-image {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 5px; // Space between logo and title
+}
+
+.event-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; // Adds an ellipsis if the title is too long
+    max-width: 100px; // Adjust as needed
+    font-size: 12px; // Adjust as needed
+}
+
+
+.filter-dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px;
+    z-index: 1;
+}
+
+.filter-dropdown.show {
+    display: block;
+}
+
+
+
