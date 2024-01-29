@@ -550,24 +550,24 @@
                               <div class="tab-pane fade active show" id="t_selling-today222" role="tabpanel" aria-labelledby="t_selling-today222-tab">
                                  <div class="selling-table-wrap selling-table-wrap--source">
 
-<form action="{{ url_for('index') }}" method="post">
-    <label for="site_dropdown">Site:</label>
-   <select name="site_dropdown" id="site_dropdown">
-       {% for site in site_list %}
-       <option value="{{ site }}" {% if site == selected_site %} selected {% endif %}>{{ site }}</option>
-       {% endfor %}
-   </select>
+<form action="{{ url_for('index') }}" method="post" style="margin: 10px;">
+    <label for="site_dropdown" style="margin: 5px;">Site:</label>
+    <select name="site_dropdown" id="site_dropdown" style="margin: 5px;">
+        {% for site in site_list %}
+        <option value="{{ site }}" {% if site == selected_site %} selected {% endif %}>{{ site }}</option>
+        {% endfor %}
+    </select>
 
-
-    <label for="ytd_brand_dropdown">Brand:</label>
-    <select name="ytd_brand_dropdown" id="ytd_brand_dropdown">
+    <label for="ytd_brand_dropdown" style="margin: 5px;">Brand:</label>
+    <select name="ytd_brand_dropdown" id="ytd_brand_dropdown" style="margin: 5px;">
         {% for brand in brand_list %}
         <option value="{{ brand }}" {% if brand == selected_ytd_brand %} selected {% endif %}>{{ brand }}</option>
         {% endfor %}
     </select>
 
-    <input type="submit" value="Show YTD Sales Chart">
+    <input type="submit" value="Show YTD Sales Chart" style="margin: 5px;">
 </form>
+
 
 <!-- Place to display the chart -->
 <div id="ytd-sales-chart">
